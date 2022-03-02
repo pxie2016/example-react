@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.header {
+    grid-area: header;
+    display: flex;
+    background-color: #99ffcc;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leftsidebar {
+    grid-area: leftsidebar;
+    background-color: #99ffcc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+    grid-area: main;
+    display: flex;
+    background-color: #99ffcc;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rightsidebar {
+    grid-area: rightsidebar;
+    background-color: #99ffcc;
 }
 
-.App-link {
-  color: #61dafb;
+.footer {
+    grid-area: footer;
+    background-color: #99ffcc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: x-large;
+}
+
+.mybox {
+    width: 60px;
+    height: 60px;
+    background-color: dodgerblue;
+    transition: 0.5s;
+}
+
+.mybox:hover {
+    width: 120px;
+    height: 120px;
+    background-color: midnightblue;
+}
+
+.gridcontainer {
+    display: grid;
+    height: 600px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+            "header header header"
+            "leftsidebar main rightsidebar"
+            "footer footer footer";
+    gap: 10px 10px;
 }
